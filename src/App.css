@@ -1,0 +1,26 @@
+.main-container {
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-btn {
+  padding: 5px 10px;
+}
+
+.task-completed {
+  color: rgb(47, 255, 82);
+}
