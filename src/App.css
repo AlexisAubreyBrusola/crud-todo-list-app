@@ -22,5 +22,6 @@
 }
 
 .task-completed {
-  color: rgb(47, 255, 82);
+  color: hsl(120, 100%, 45%);
+  text-decoration-line: line-through;
 }

@@ -1,4 +1,3 @@
-// TodoList.jsx file
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -15,6 +14,11 @@ const TodoList = ({
     setEditedTaskName(e.target.value);
   };
 
+  const handleEditStart = (task) => {
+    setEditedTaskName(task.taskName); // Initialize editedTaskName with the current task's name
+    toggleEdit(task.id);
+  };
+
   return (
     <div className='todoList-container'>
       {todoList.map((task) => (
@@ -23,7 +27,7 @@ const TodoList = ({
             <div className='task'>
               <input
                 type='text'
-                value={editedTaskName || task.taskName}
+                value={editedTaskName}
                 onChange={handleEditChange}
               />
               <button
@@ -47,7 +51,10 @@ const TodoList = ({
               >
                 ✅
               </button>
-              <button className='task-btn' onClick={() => toggleEdit(task.id)}>
+              <button
+                className='task-btn'
+                onClick={() => handleEditStart(task)}
+              >
                 ✍️
               </button>
             </div>

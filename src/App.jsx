@@ -45,6 +45,7 @@ function App() {
   };
 
   const saveEditedTask = (taskId, editedTaskName) => {
+    console.log('Edited Task Name:', editedTaskName);
     setTodoList((prevTodoList) =>
       prevTodoList.map((task) =>
         task.id === taskId
